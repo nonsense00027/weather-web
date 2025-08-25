@@ -1,0 +1,49 @@
+.sidebar {
+  padding: 20px;
+  height: 100%;
+  gap: 36px;
+  width: 300px;
+  background-color: white;
+}
+
+.sidebar__icon-current {
+  font-size: 160px;
+}
+
+.sidebar__icon {
+  font-size: 28px;
+}
+
+.sidebar__temp {
+  margin-bottom: 4px;
+  display: flex;
+}
+
+.sidebar__temp h3 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.sidebar__temp h3:first-child {
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.sidebar__top {
+  flex: 1;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 36px;
+}
+
+.sidebar__bottom {
+  flex: 0.7;
+  gap: 16px;
+}
+
+.sidebar__bottom-condition {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
