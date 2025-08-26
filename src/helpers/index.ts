@@ -1,4 +1,4 @@
-import type { WeatherType } from "../components/common/types";
+import type { WeatherType } from "../common/types";
 
 export function formatDate(dateStr: string) {
   const date = new Date(dateStr);
@@ -19,7 +19,9 @@ const icons: Record<WeatherType, string> = {
   sunny: "☀️",
   cloudy: "☁️",
   "Partly cloudy": "☁️",
+  Overcast: "☁️",
   "Patchy rain nearby": "🌦️",
+  "Light rain": "🌧️",
   "Moderate rain": "🌧️",
   "Heavy rain": "⛈️",
 };

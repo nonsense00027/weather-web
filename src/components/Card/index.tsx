@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import { formatDate, getWeatherIcon } from "../../helpers";
-import type { WeatherType } from "../common/types";
+import type { WeatherType } from "../../common/types";
 
 interface CardProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   date: string;

@@ -2,7 +2,7 @@ import "./style.css";
 import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
 import { useState } from "react";
-import type { DataResponse } from "../components/common/types";
+import type { DataResponse } from "../common/types";
 
 export const Home = ({ data }: { data: DataResponse }) => {
   console.log(data);
@@ -34,7 +34,7 @@ export const Home = ({ data }: { data: DataResponse }) => {
           </div>
           <section className="home__forecast">
             <ul>
-              {data?.forecast?.forecastday.slice(1).map((day) => (
+              {data?.forecast?.forecastday.map((day) => (
                 <li key={day.date}>
                   <Card
                     date={day.date}

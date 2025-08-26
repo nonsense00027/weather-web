@@ -1,6 +1,6 @@
 .home {
   height: 100%;
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,12 +17,12 @@
 }
 
 .home__content-right {
-  padding: 48px;
+  padding: 48px 48px 48px 348px;
   flex: 1;
 }
 
 .home__content-right-header {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   display: flex;
   justify-content: space-between;
 }

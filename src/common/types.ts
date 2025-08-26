@@ -4,7 +4,9 @@ export type WeatherType =
   | "Partly cloudy"
   | "Patchy rain nearby"
   | "Moderate rain"
-  | "Heavy rain";
+  | "Light rain"
+  | "Heavy rain"
+  | "Overcast";
 
 export type ForecastDay = {
   date: string;

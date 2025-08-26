@@ -1,9 +1,13 @@
 .sidebar {
-  padding: 20px;
+  padding: 20px 36px;
   height: 100%;
   gap: 36px;
   width: 300px;
   background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
 }
 
 .sidebar__icon-current {

@@ -1,7 +1,7 @@
 .card {
   background-color: white;
   border-radius: 12px;
-  padding: 12px 28px;
+  padding: 16px 32px;
   gap: 12px;
   box-shadow: -11px 9px 5px -8px rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: -11px 9px 5px -8px rgba(0, 0, 0, 0.11);
@@ -9,18 +9,18 @@
 }
 
 .card__condition {
-  font-size: 36px;
+  font-size: 40px;
   user-select: none;
 }
 
 .card__temps {
   gap: 2px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .card__date {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .card__max-temp {

@@ -1,9 +1,9 @@
 import { formatDateToDay, getWeatherIcon } from "../../helpers";
-import type { DataResponse } from "../common/types";
+import type { DataResponse } from "../../common/types";
 import "./style.css";
 
 function Sidebar({ data }: { data: DataResponse }) {
-  const { current, forecast } = data;
+  const { current, forecast, location } = data;
 
   const todayForecast = forecast.forecastday[0];
 
@@ -38,6 +38,10 @@ function Sidebar({ data }: { data: DataResponse }) {
           <p className="sidebar__rain-chance">
             Rain - {todayForecast.day.daily_chance_of_rain}%
           </p>
+        </div>
+        <div>
+          <p>{`${location.name}, ${location.region}`}</p>
+          <p>{location.country}</p>
         </div>
       </div>
     </div>
