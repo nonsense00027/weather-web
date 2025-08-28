@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Home } from "./pages/Home";
 import type { DataResponse } from "./common/types";
+import { getLocation } from "./helpers";
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -13,8 +14,9 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
+      const { latitude, longitude } = await getLocation();
       const response = await fetch(
-        `${apiUrl}?key=${apiKey}&q=14.2970081,121.0969422&days=7&aqi=no&alerts=no`
+        `${apiUrl}?key=${apiKey}&q=${latitude},${longitude}&days=7&aqi=no&alerts=no`
       );
       const data = await response.json();
       setData(data);

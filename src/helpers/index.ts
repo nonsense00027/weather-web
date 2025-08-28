@@ -16,20 +16,39 @@ export function formatDateToDay(dateStr: string) {
 }
 
 const icons: Record<WeatherType, string> = {
-  sunny: "☀️",
-  cloudy: "☁️",
-  "Partly cloudy": "☁️",
-  Overcast: "☁️",
-  "Patchy rain nearby": "🌦️",
-  "Light rain": "🌧️",
-  "Moderate rain": "🌧️",
-  "Heavy rain": "⛈️",
+  1111: "☀️",
+  1112: "☁️",
+  1003: "☁️",
+  1002: "☁️",
+  1063: "🌦️",
+  1240: "🌧️",
+  1150: "🌧️",
+  1189: "🌧️",
+  1183: "🌧️",
+  1153: "🌧️",
+  1195: "⛈️",
 };
 
 export function getWeatherIcon(condition: WeatherType) {
   return icons[condition] ?? "🌈";
 }
 
-export function formatTemperature(temp: number, scale: "C" | "F") {
-  return `${temp.toFixed(0)}°${scale === "C" ? "C" : "F"}`;
+export function getLocation(): Promise<{
+  latitude: number;
+  longitude: number;
+}> {
+  return new Promise((resolve, reject) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          resolve({ latitude, longitude });
+        },
+        (error) => reject(new Error("Geolocation error: " + error.message))
+      );
+    } else {
+      reject(new Error("Geolocation is not supported by this browser."));
+    }
+  });
 }

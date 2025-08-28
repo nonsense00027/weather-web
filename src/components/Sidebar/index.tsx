@@ -11,7 +11,7 @@ function Sidebar({ data }: { data: DataResponse }) {
     <div className="sidebar flex-column">
       <div className="sidebar__top flex-column">
         <p className="sidebar__icon-current">
-          {getWeatherIcon(current.condition.text)}
+          {getWeatherIcon(current.condition.code)}
         </p>
 
         <div className="sidebar__temp">
@@ -27,14 +27,14 @@ function Sidebar({ data }: { data: DataResponse }) {
       <div className="sidebar__bottom flex-column">
         <div className="sidebar__bottom-condition">
           <p className="sidebar__icon">
-            {getWeatherIcon(todayForecast.day.condition.text)}
+            {getWeatherIcon(todayForecast.day.condition.code)}
           </p>
           <p className="sidebar__condition">
             {todayForecast.day.condition.text}
           </p>
         </div>
         <div className="sidebar__bottom-condition">
-          <p className="sidebar__icon">{getWeatherIcon("Moderate rain")}</p>
+          <p className="sidebar__icon">🌧️</p>
           <p className="sidebar__rain-chance">
             Rain - {todayForecast.day.daily_chance_of_rain}%
           </p>
